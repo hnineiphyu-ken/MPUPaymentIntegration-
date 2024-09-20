@@ -10,7 +10,8 @@ class Dinger {
      */
     public static function sendPayment($data)
     {
-        $url = config('mpu.'.env('APP_TYPE', 'uat'));
+        $app_type = config('mpu.APP_TYPE');
+        $url = config('mpu.'.$app_type);
         $merchantID = config('mpu.merchantID');
         $invoiceNo = $data['externalTransactionId'];
         $productDesc = 'test';

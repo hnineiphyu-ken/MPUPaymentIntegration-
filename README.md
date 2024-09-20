@@ -33,6 +33,8 @@ Config Output
 ----------
 
     return [
+        #to fill app type (uat or production)
+        'APP_TYPE' => null,
         #to fill payment uat url 
         'uat' => null,
         #to fill payment production url
